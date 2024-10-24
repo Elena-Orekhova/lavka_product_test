@@ -1,0 +1,70 @@
+<!DOCTYPE html>
+<html lang="ru">
+
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Shop</title>
+  <link rel="stylesheet" href="./styles/style.css">
+  <link rel="stylesheet" href="./fonts/fonts.css">
+</head>
+
+<body>
+  <main class="main">
+    <section class="main__showcase">
+      <img src="./image/showcase.svg" draggable="false" alt="Showcase" class="main__showcase_stand">
+      <ul class="main__products_list showcase-upper">
+        <li draggable="true" class="main__products_item" data-product="Red Wine">
+          <img src="./image/red-wine.svg" alt="Red Wine">
+        </li>
+        <li class="main__products_item" data-product="Milk">
+          <img src="./image/milk.svg" alt="Milk">
+        </li>
+        <li class="main__products_item" data-product="Jam">
+          <img src="./image/jam.svg" alt="Jam">
+        </li>
+        <li class="main__products_item" data-product="Cheese">
+          <img src="./image/cheese.svg" alt="Cheese">
+        </li>
+      </ul>
+      <ul class="main__products_list showcase-medium">
+        <li class="main__products_item" data-product="Steak">
+          <img src="./image/steak.svg" alt="Steak">
+        </li>
+        <li class="main__products_item" data-product="Thigh">
+          <img src="./image/thigh.svg" alt="Thigh">
+        </li>
+        <li class="main__products_item" data-product="Chips">
+          <img src="./image/chips.svg" alt="Chips">
+        </li>
+      </ul>
+      <ul class="main__products_list showcase-lower">
+        <li class="main__products_item" data-product="Pineapple">
+          <img src="./image/pineapple.svg" alt="Pineapple">
+        </li>
+        <li class="main__products_item" data-product="Banana">
+          <img src="./image/banana.svg" alt="Banana">
+        </li>
+        <li class="main__products_item" data-product="Red Apple">
+          <img src="./image/red-apple.svg" alt="Red Apple">
+        </li>
+        <li class="main__products_item" data-product="Salad">
+          <img src="./image/salad.svg" alt="Salad">
+        </li>
+      </ul>
+    </section>
+
+    <section class="main__cart" id="cart" ondrop="drop(event)" ondragover="allowDrop(event)">
+      <img class="main__cart_img-cart" draggable="false" src="./image/cart.svg" alt="Shopping Cart">
+      <div id="cartItemsCount" style="display: none"></div>
+      <div id="cartItemsContainer"></div>
+      <button id="payButton" style="display: none">
+        Оплатить корзину
+      </button>
+    </section>
+
+  </main>
+  <script src="./script/drag-and-drop.js"></script>
+</body>
+
+</html>
